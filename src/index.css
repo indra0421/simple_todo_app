@@ -27,6 +27,10 @@ body{
   height: auto;
   margin-top: 42px;
 }
+.image_div img{
+  width: 194px;
+  height: 180px;
+}
 .paragraph p{
    font-size: 25px;
     font-weight: 700;
@@ -42,6 +46,7 @@ body{
     width: auto;
     font-family: 'Baloo Bhai 2', cursive;
     background-color: white;
+    border-radius: 9px;
 }
 .add_list_div img{
   height: 17px;
@@ -71,6 +76,7 @@ button{
   font-size: 20px;
   font-family: 'Baloo Bhai 2', cursive;
   font-weight: bold;
+  margin-top: 48px;
 }
 .check_list button:hover{
   transform: scale(1.02);
@@ -79,13 +85,19 @@ button{
 .add_icon{
   /* outline: none; */
   border: none;
-  background-color: white;
-  font-weight: 900;
   
+  transform: scale(1.4);
+  margin-top: 2px;
+  /* border: 3px solid #7CFF01;
+  border-radius: 20px; */
+  background-color: #f8f8ef;
 }
 .add_icon:hover{
-  transform: scale(1.4);
+  transform: scale(1.6);
   color: green;
+  background-color: rgba(133, 128, 128, 0.24);
+  border-radius: 10px;
+
 }
 
 .each_item h2{
@@ -111,13 +123,18 @@ button{
  .each_item{
   display: inline-block;
   background-color: white;
-  width: 25.8%;
-    margin-top: 8px;
-  
+  width: auto;
+  height: auto;
+  margin-top: 8px;
+  border-radius: 7px;
   }
   .each_item h2{
     display: inline-block;
     width: auto;
+    height: auto;
+    border-radius: 7px;
+    margin-left: 6px;
+    margin-top: 2px;
   }
   .items{
     display: flex;
@@ -138,9 +155,17 @@ button{
 }
 .edit_del_div{
   margin-top: 5px;
+  display: flex;
+  margin-left: 13px;
 }
 
 .edit_icon:hover{
   color: rgb(43, 199, 43);
 }
 
+@media(max-width:415px){
+
+   .add_list_div input{
+     width: 151px;
+   }
+}

@@ -4,10 +4,12 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import Tooltip from '@mui/material/Tooltip';
 import UpdateIcon from '@mui/icons-material/Update';
-
+import note_logo from './note_logo.jpg'
 
 const To_do_list = () => {
-    const image = "photos/note.jpg"
+    
+    // const image = "photos/note1.jpg";
+    // const image = "photos/note_logo.jpg"
     const [inputData, setInputData] = useState("");
     const [items, setItems] = useState([]);
     const [toggleSubmit, setToggleSubmit] = useState(true);
@@ -74,10 +76,10 @@ const To_do_list = () => {
         <> 
             <div className='main_div'>
                 <div className='image_div'>
-                    <img src={image} alt='eror..' />
+                    <img src={note_logo} alt='eror..' />
                 </div>
                 <div className='paragraph'>
-                    <p>Add Your Notes Here 🗒️</p>
+                    <p>Add Your List Here 🗒️</p>
                 </div>
                 <div>
                     <div className='add_list_div'>
