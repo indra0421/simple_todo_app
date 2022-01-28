@@ -1,0 +1,146 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} 
+body{
+  background-image: url('');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1000px;
+  background-color: black;
+  font-family: 'Baloo Bhai 2', cursive;
+}
+/* html,body{
+  
+} */
+
+/* .card:hover{
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 7px 7px rgba(0,0,0,0.1);
+
+} */
+
+.main_div{
+  /* border: 2px solid blue; */
+  text-align: center;
+  height: auto;
+  margin-top: 42px;
+}
+.paragraph p{
+   font-size: 25px;
+    font-weight: 700;
+    padding: 10px;
+    color: white;
+}
+
+.add_list_div{
+  border: 2px solid red;
+    height: auto;
+    padding: 8px;
+    display: inline-block;
+    width: auto;
+    font-family: 'Baloo Bhai 2', cursive;
+    background-color: white;
+}
+.add_list_div img{
+  height: 17px;
+    width: 41px;
+}
+.add_list_div input{
+  width: 281px;
+    border: none;
+    height: 26px;
+    padding: 3px;
+    margin-left: 7px;
+    outline: none;
+    margin-right: 20px;
+    font-size: 18px;
+}
+button{
+  cursor: pointer;
+}
+.check_list{
+  
+}
+.check_list button{
+  width: 137px;
+  height: 42px;
+  border-radius: 18px;
+  margin: 13px;
+  font-size: 20px;
+  font-family: 'Baloo Bhai 2', cursive;
+  font-weight: bold;
+}
+.check_list button:hover{
+  transform: scale(1.02);
+  color: rgb(177, 75, 146);
+}
+.add_icon{
+  /* outline: none; */
+  border: none;
+  background-color: white;
+  font-weight: 900;
+  
+}
+.add_icon:hover{
+  transform: scale(1.4);
+  color: green;
+}
+
+.each_item h2{
+  color: black;
+  background-color: white;
+  font-size: 19px;
+}
+.delete_icon{
+  border: none;
+  background-color: white;
+}
+.delete_icon:hover{
+  color: red;
+}
+.show_items{
+  margin-top: 10px;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  
+ }
+ .each_item{
+  display: inline-block;
+  background-color: white;
+  width: 25.8%;
+    margin-top: 8px;
+  
+  }
+  .each_item h2{
+    display: inline-block;
+    width: auto;
+  }
+  .items{
+    display: flex;
+    justify-content: space-between;
+  }
+  .all_items{
+    display: flex;
+    flex-direction: column;
+  }
+
+.delete_icon{
+  margin-right: 5px;
+}
+.edit_icon{
+  margin-right: 7px;
+  border: none;
+  background-color: white;
+}
+.edit_del_div{
+  margin-top: 5px;
+}
+
+.edit_icon:hover{
+  color: rgb(43, 199, 43);
+}
+
