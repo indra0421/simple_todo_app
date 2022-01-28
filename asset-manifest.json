@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/simple_todo_app/static/css/main.8dbd9960.css",
-    "main.js": "/simple_todo_app/static/js/main.7da7d312.js",
+    "main.js": "/simple_todo_app/static/js/main.ca2c4f7a.js",
     "static/media/note_logo.jpg": "/simple_todo_app/static/media/note_logo.ebe3d968df895058557b.jpg",
     "index.html": "/simple_todo_app/index.html",
     "main.8dbd9960.css.map": "/simple_todo_app/static/css/main.8dbd9960.css.map",
-    "main.7da7d312.js.map": "/simple_todo_app/static/js/main.7da7d312.js.map"
+    "main.ca2c4f7a.js.map": "/simple_todo_app/static/js/main.ca2c4f7a.js.map"
   },
   "entrypoints": [
     "static/css/main.8dbd9960.css",
-    "static/js/main.7da7d312.js"
+    "static/js/main.ca2c4f7a.js"
   ]
 }
