@@ -4,7 +4,8 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import Tooltip from '@mui/material/Tooltip';
 import UpdateIcon from '@mui/icons-material/Update';
-import note_logo from './note_logo.jpg'
+import note_logo from './note_logo.jpg';
+import SaveIcon from '@mui/icons-material/Save';
 
 const To_do_list = () => {
     
@@ -94,7 +95,7 @@ const To_do_list = () => {
                             {toggleSubmit ? <Tooltip title='Add'>
                                 <button className='add_icon' onClick={addItem}><AddIcon /></button>
                             </Tooltip> : <Tooltip title='Update'>
-                                <button className='add_icon' onClick={addItem}><UpdateIcon /></button>
+                                <button className='add_icon' onClick={addItem}><SaveIcon /></button>
                             </Tooltip>}
 
                         </div>
