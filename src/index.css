@@ -9,7 +9,7 @@ body{
   background-size: cover;
   height: 1000px;
   background-color: black;
-  font-family: 'Baloo Bhai 2', cursive;
+  /* font-family: 'Baloo Bhai 2', cursive; */
 }
 /* html,body{
   
@@ -36,6 +36,8 @@ body{
     font-weight: 700;
     padding: 10px;
     color: white;
+    font-family: 'Baloo Bhai 2', cursive;
+
 }
 
 .add_list_div{
@@ -104,14 +106,13 @@ button{
   color: black;
   background-color: white;
   font-size: 19px;
+  font-family: 'Poppins', sans-serif;
 }
 .delete_icon{
   border: none;
   background-color: white;
 }
-.delete_icon:hover{
-  color: red;
-}
+
 .show_items{
   margin-top: 10px;
   align-items: center;
@@ -127,14 +128,21 @@ button{
   height: auto;
   margin-top: 8px;
   border-radius: 7px;
+  
   }
   .each_item h2{
+    border: 3px solid grey;
+    font-weight: bold;
     display: inline-block;
     width: auto;
     height: auto;
     border-radius: 7px;
     margin-left: 6px;
-    margin-top: 2px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 1px;
+    padding-right: 5px;
+    background-image: linear-gradient(to bottom right,yellow,rgb(60, 209, 60),rgb(0, 217, 255));
   }
   .items{
     display: flex;
@@ -147,11 +155,28 @@ button{
 
 .delete_icon{
   margin-right: 5px;
+  background-color: rgba(197, 186, 186, 0.685);
+  border-radius: 10px;
+  width: 35px;
+  margin-bottom: 3px;
+  height: 35px;
+}
+.delete_icon:hover{
+  color: red;
+  transform: scale(1.1);
 }
 .edit_icon{
   margin-right: 7px;
   border: none;
-  background-color: white;
+  background-color: rgba(197, 186, 186, 0.685);
+  border-radius: 10px;
+  width: 35px;
+  margin-bottom: 3px;
+  height: 35px;
+}
+.edit_icon:hover{
+  color: rgb(43, 199, 43);
+  transform: scale(1.1);
 }
 .edit_del_div{
   margin-top: 5px;
@@ -159,9 +184,7 @@ button{
   margin-left: 13px;
 }
 
-.edit_icon:hover{
-  color: rgb(43, 199, 43);
-}
+
 
 @media(max-width:415px){
 
