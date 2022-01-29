@@ -9,6 +9,7 @@ body{
   background-size: cover;
   height: 1000px;
   background-color: black;
+  background-image: linear-gradient(black,#142453);
   /* font-family: 'Baloo Bhai 2', cursive; */
 }
 /* html,body{
@@ -85,21 +86,21 @@ button{
   color: rgb(177, 75, 146);
 }
 .add_icon{
-  /* outline: none; */
-  border: none;
   
+  border: none;
   transform: scale(1.4);
   margin-top: 2px;
-  /* border: 3px solid #7CFF01;
-  border-radius: 20px; */
-  background-color: #f8f8ef;
+  background-color: #1878D0;
+  border-radius: 7px;
+  /* background-color: #246BFD; */
+  color: white;
 }
 .add_icon:hover{
-  transform: scale(1.6);
-  color: green;
-  background-color: rgba(133, 128, 128, 0.24);
-  border-radius: 10px;
-
+  transform: scale(1.5);
+  color: white;
+ 
+  /* border-radius: 10px; */
+ 
 }
 
 .each_item h2{
