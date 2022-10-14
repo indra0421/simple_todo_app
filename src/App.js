@@ -3,7 +3,7 @@ import index from './index.css'
 import To_do_list from './To_do_list'
 import Note_App from './Note_App'
 
-const App = () =>{
+const App = () => {
     return(
         <>
            <To_do_list/>
