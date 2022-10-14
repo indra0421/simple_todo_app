@@ -8,7 +8,7 @@ import note_logo from './note_logo.jpg';
 import SaveIcon from '@mui/icons-material/Save';
 
 const To_do_list = () => {
-    
+
     // const image = "photos/note1.jpg";
     // const image = "photos/note_logo.jpg"
     const [inputData, setInputData] = useState("");
@@ -17,10 +17,10 @@ const To_do_list = () => {
     const [iseditItem, setIsEditItem] = useState(null);
 
     const addItem = () => {
-        
+
         if (!inputData) {
             alert("plz fill data");
-        } else if (inputData && !toggleSubmit) {              
+        } else if (inputData && !toggleSubmit) {
             setItems(
                 items.map((element) => {
                     if (element.id === iseditItem) {
@@ -35,19 +35,19 @@ const To_do_list = () => {
         }
         else {
 
-            const allInputData = { id: new Date().getTime().toString(), name: inputData } 
+            const allInputData = { id: new Date().getTime().toString(), name: inputData }
             console.log(allInputData);
             setItems([...items, allInputData]);
-            setInputData("");               
+            setInputData("");
 
         }
 
     }
 
-   
+
     const deleteItem = (index) => {
         const updatedItems = items.filter((element) => {
-            return index != element.id; 
+            return index != element.id;
         })
         setItems(updatedItems);
     }
@@ -58,23 +58,23 @@ const To_do_list = () => {
     }
 
 
-   
-   
+
+
 
     const editItem = (id) => {
         let newEditItem = items.find((elem) => {
             return elem.id === id;
         });
         console.log(newEditItem);
-        setToggleSubmit(false);               
-        setInputData(newEditItem.name);                   
+        setToggleSubmit(false);
+        setInputData(newEditItem.name);
 
-        setIsEditItem(id);                     
+        setIsEditItem(id);
 
     }
 
     return (
-        <> 
+        <>
             <div className='main_div'>
                 <div className='image_div'>
                     <img src={note_logo} alt='eror..' />
@@ -89,7 +89,7 @@ const To_do_list = () => {
                             <input placeholder='Add Items....'
                                 value={inputData}
                                 onChange={(event) => {
-                                    setInputData(event.target.value);
+                                    setInputData(event.target.value.trim());
                                 }}
                             />
                             {toggleSubmit ? <Tooltip title='Add'>
