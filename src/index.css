@@ -50,6 +50,7 @@ body{
     font-family: 'Baloo Bhai 2', cursive;
     background-color: white;
     border-radius: 9px;
+    position: relative; 
 }
 .add_list_div img{
   height: 17px;
@@ -115,7 +116,7 @@ button{
 }
 
 .show_items{
-  margin-top: 10px;
+  margin-top: 27px;
   align-items: center;
   text-align: center;
   display: flex;
@@ -185,6 +186,13 @@ button{
   margin-left: 13px;
 }
 
+.no_value_notification{
+  position: absolute;
+  bottom: 0;
+  left: 0.25rem;
+  transform: translateY(calc(100% + 0.25rem));
+  color: #CC0000;
+}
 
 
 @media(max-width:415px){
