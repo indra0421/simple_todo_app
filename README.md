@@ -1,14 +1,14 @@
 ![image](https://user-images.githubusercontent.com/101879822/194800975-0ca5fed2-ea69-4865-9175-fd85eb31291c.png)
 
 
-# Getting Started with Create React App
+# Getting started with Create React App
 
 This Project was Bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 
 ## Available Scripts
 
-In the Project Directory, you can run:
+In the Project Directory, you can run :
 
 ### `npm start`
 
@@ -35,7 +35,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### `npm run eject`
 
-**Note: this is a one-way Operation. Once you `eject`, you can't go back!**
+**Note: this is a one-way Operation. Once you `eject`, you can not go back!**
 
 If you are not satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
