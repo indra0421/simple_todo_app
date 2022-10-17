@@ -6,6 +6,7 @@ import Tooltip from '@mui/material/Tooltip';
 import UpdateIcon from '@mui/icons-material/Update';
 import note_logo from './note_logo.jpg';
 import SaveIcon from '@mui/icons-material/Save';
+import { useEffect } from 'react';
 
 const To_do_list = () => {
 
@@ -15,11 +16,18 @@ const To_do_list = () => {
     const [items, setItems] = useState([]);
     const [toggleSubmit, setToggleSubmit] = useState(true);
     const [iseditItem, setIsEditItem] = useState(null);
+    const [noValue, setNoValue] = useState(false);
+
+    const defaultContainerStyle={
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+    }
 
     const addItem = () => {
 
         if (!inputData) {
-            alert("plz fill data");
+            setNoValue(true)
         } else if (inputData && !toggleSubmit) {
             setItems(
                 items.map((element) => {
@@ -36,7 +44,6 @@ const To_do_list = () => {
         else {
 
             const allInputData = { id: new Date().getTime().toString(), name: inputData }
-            console.log(allInputData);
             setItems([...items, allInputData]);
             setInputData("");
 
@@ -57,15 +64,18 @@ const To_do_list = () => {
         setItems([]);
     }
 
-
-
-
+    useEffect(()=>{
+        let timeOut;
+        if(noValue){
+            timeOut = setTimeout(()=>setNoValue(false), 1500)
+        }
+        return () => clearTimeout(timeOut)
+    },[noValue])
 
     const editItem = (id) => {
         let newEditItem = items.find((elem) => {
             return elem.id === id;
         });
-        console.log(newEditItem);
         setToggleSubmit(false);
         setInputData(newEditItem.name);
 
@@ -84,7 +94,7 @@ const To_do_list = () => {
                 </div>
                 <div>
                     <div className='add_list_div'>
-                        <div>
+                        <div style={{...defaultContainerStyle}}>
                             <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNWBNbdIZdkOzwe76Y6LQjdvow3Dxcj2aYP728z0zrT-b_FYaKIMsGpCIMNTPmJI-bi8o&usqp=CAU' alt='loading...' />
                             <input placeholder='Add Items....'
                                 value={inputData}
@@ -93,11 +103,11 @@ const To_do_list = () => {
                                 }}
                             />
                             {toggleSubmit ? <Tooltip title='Add'>
-                                <button className='add_icon' onClick={addItem}><AddIcon /></button>
+                                <button className='add_icon' style={defaultContainerStyle} onClick={addItem}><AddIcon /></button>
                             </Tooltip> : <Tooltip title='Update'>
-                                <button className='add_icon' onClick={addItem}><SaveIcon /></button>
+                                <button className='add_icon' style={defaultContainerStyle} onClick={addItem}><SaveIcon /></button>
                             </Tooltip>}
-
+                            {noValue && <div className='no_value_notification'>* Please enter a valid value</div>}
                         </div>
 
                     </div>
@@ -132,9 +142,9 @@ const To_do_list = () => {
 
 
                 </div>
-                <div className='check_list'>
+                {items?.length>0 && <div className='check_list'>
                     <button className='remove_all_button' onClick={deleteAll}>Delete All</button>
-                </div>
+                </div>}
             </div>
         </>
     )
