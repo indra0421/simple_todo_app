@@ -27,12 +27,12 @@ See the section about[running tests](https://facebook.github.io/create-react-app
 ### `npm run build`
 
 Builds the app for production to the `build` folder
-It correctly bundles React in production mode and optimizes the build for the best performance.
+It correctly bundles React in production mode and optimizes the build for the best performance
 
 The build is minified and the filenames include the hashes
 Your App is Ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information
 
 ### `npm run eject`
 
@@ -60,7 +60,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/c
 This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
 ### Making a Progressive Web App
-
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
