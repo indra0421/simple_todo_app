@@ -8,7 +8,7 @@ This Project was Bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-In the Project Directory, you can run
+In the Project Directory , you can run
 
 ###  `npm start`
 
