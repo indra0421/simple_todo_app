@@ -15,8 +15,8 @@ import Checkbox from '@mui/material/Checkbox';
 
 const To_do_list = () => {
 
-    const image = "photos/note1.jpg";
-
+    // const image = "photos/note1.jpg";
+    // const image = "photos/note_logo.jpg"
     const [inputData, setInputData] = useState("");
     const [items, setItems] = useState([]);
     const [toggleSubmit, setToggleSubmit] = useState(true);
@@ -28,7 +28,7 @@ const To_do_list = () => {
     const addItem = () => {
 
         if (!inputData) {
-            alert("please fill some data");
+            alert("plz fill data");
         } else if (inputData && !toggleSubmit) {
             setItems(
                 items.map((element) => {
@@ -100,10 +100,8 @@ const To_do_list = () => {
                                 placeholder='Add Items....'
                                 value={inputData}
                                 onChange={(event) => {
-                                    setInputData(event.target.value);
-                                }
-
-                                }
+                                    setInputData(event.target.value.trim());
+                                }}
                             />
                             {toggleSubmit ? <Tooltip title='Add'>
                                 <button className='add_icon' onClick={addItem}><AddIcon /></button>
