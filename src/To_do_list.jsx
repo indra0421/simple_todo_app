@@ -7,6 +7,12 @@ import UpdateIcon from '@mui/icons-material/Update';
 import note_logo from './note_logo.jpg';
 import SaveIcon from '@mui/icons-material/Save';
 
+import Checkbox from '@mui/material/Checkbox';
+
+
+// import { Checkbox } from '@mui/material';
+
+
 const To_do_list = () => {
 
     // const image = "photos/note1.jpg";
@@ -15,6 +21,9 @@ const To_do_list = () => {
     const [items, setItems] = useState([]);
     const [toggleSubmit, setToggleSubmit] = useState(true);
     const [iseditItem, setIsEditItem] = useState(null);
+
+    const [checked,setChecked] = useState(false);
+
 
     const addItem = () => {
 
@@ -86,7 +95,9 @@ const To_do_list = () => {
                     <div className='add_list_div'>
                         <div>
                             <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNWBNbdIZdkOzwe76Y6LQjdvow3Dxcj2aYP728z0zrT-b_FYaKIMsGpCIMNTPmJI-bi8o&usqp=CAU' alt='loading...' />
-                            <input placeholder='Add Items....'
+                            <input
+                                onKeyPress={(e) => e.key == 'Enter' ? addItem() : null}
+                                placeholder='Add Items....'
                                 value={inputData}
                                 onChange={(event) => {
                                     setInputData(event.target.value.trim());
@@ -111,7 +122,12 @@ const To_do_list = () => {
                                 {/* every value needs a unique value */}
                                 <div className='each_item' key={element.id}>
                                     <div className='items'>
-                                        <h2> ➡️ {element.name}</h2>
+                                    <Tooltip title = {checked == false ? 'Mark as undone' : 'Mark as done'}>
+                                    <input type="checkbox" className='chkbox'
+                                    onChange={(e) => setChecked(!checked)} />
+                                    </Tooltip>
+                                        
+                                        <h2>  {element.name}</h2>
                                         <div className='edit_del_div'>
                                             <Tooltip title='Edit'>
                                                 <button className='edit_icon' onClick={() => editItem(element.id)}><EditIcon /></button>
@@ -119,6 +135,8 @@ const To_do_list = () => {
                                             <Tooltip title='Delete'>
                                                 <button className='delete_icon' onClick={() => deleteItem(element.id)}><DeleteIcon /></button>
                                             </Tooltip>
+
+
                                         </div>
 
                                     </div>
