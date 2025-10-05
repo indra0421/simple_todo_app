@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const Header = () => {
     const logo = '/photos/logo.jpg'
     return (
@@ -9,8 +8,6 @@ const Header = () => {
                 <div>
                     <img src={logo} alt="eror" className='header_main_div_logo' />
                 </div>
-
-
             </div>
         </>
     )
