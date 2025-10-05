@@ -9,10 +9,6 @@ import SaveIcon from '@mui/icons-material/Save';
 
 import Checkbox from '@mui/material/Checkbox';
 
-
-// import { Checkbox } from '@mui/material';
-
-
 const To_do_list = () => {
 
     // const image = "photos/note1.jpg";
