@@ -6,12 +6,9 @@ import Tooltip from '@mui/material/Tooltip';
 import UpdateIcon from '@mui/icons-material/Update';
 import note_logo from './note_logo.jpg';
 import SaveIcon from '@mui/icons-material/Save';
-
 import Checkbox from '@mui/material/Checkbox';
 
 const To_do_list = () => {
-
-    // const image = "photos/note1.jpg";
     // const image = "photos/note_logo.jpg"
     const [inputData, setInputData] = useState("");
     const [items, setItems] = useState([]);
